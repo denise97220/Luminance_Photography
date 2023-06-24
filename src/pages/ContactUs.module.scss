@@ -1,0 +1,89 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.cover {
+  background-image: url('../assets/6.CONTACT-1.jpeg');
+  width: 100%;
+  height: 25rem;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+
+  span {
+    display: block;
+  }
+
+  .text {
+    position: absolute;
+    right: 0;
+    top: 130px;
+    padding: 1.5rem;
+
+    .primaryMain {
+      font-size: 1.8rem;
+      padding-bottom: 1rem;
+    }
+
+    .primarySub {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.calendly {
+  width: 100%;
+  min-width: 320px;
+  height: 600px;
+}
+
+.notice {
+  padding: 1.5rem;
+  padding-top: 2rem;
+  max-width: 900px;
+
+  &__content {
+    padding-left: 1rem;
+    li {
+      list-style: circle;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__info {
+    margin-top: 1rem;
+
+    .mail,
+    .ig {
+      display: flex;
+      align-items: center;
+      margin-top: 1rem;
+    }
+
+    .icon {
+      width: 25px;
+      height: 25px;
+      padding-right: 0.5rem;
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .cover {
+    .text {
+      .primaryMain {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  .calendly {
+    height: 700px;
+  }
+}

@@ -1,0 +1,163 @@
+.header {
+  width: 100%;
+  height: 10rem;
+  padding-top: 0.5rem;
+
+  .logoBox {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .logo {
+      width: 11rem;
+      height: 10rem;
+    }
+  }
+
+  .logoBox__desktop {
+    display: none;
+  }
+
+  .hamburgerContainer {
+    padding: 0.5rem;
+    padding-top: 0.8rem;
+    padding-right: 0.8rem;
+    position: absolute;
+    right: 0px;
+
+    .hamburger {
+      width: 18px;
+      height: 2.2px;
+      background: #4c4c4c;
+      display: block;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: '';
+        width: 18px;
+        height: 2.2px;
+        background: #4c4c4c;
+        position: absolute;
+        left: 0;
+      }
+
+      &::before {
+        top: 5px;
+      }
+
+      &::after {
+        bottom: 5px;
+      }
+    }
+  }
+
+  .nav__desktop {
+    display: none;
+  }
+}
+
+.nav {
+  background-color: white;
+  width: 180px;
+  height: 220px;
+  position: absolute;
+  right: 1em;
+  top: 3.7rem;
+  z-index: 99;
+  border: solid 1px #dbdbdb;
+  border-radius: 4px;
+  transform: scale(0, 0);
+  transform-origin: top right;
+  transition: transform 0.1s;
+  opacity: 0;
+
+  &__ul {
+    padding: 1.5rem;
+
+    li {
+      margin-bottom: 1rem;
+      color: #6b6b6b;
+      font-size: 0.9rem;
+      font-weight: 500;
+      cursor: pointer;
+
+      &:hover {
+        color: black;
+      }
+    }
+  }
+}
+
+.toggle {
+  display: none;
+}
+
+.toggle:checked ~ .nav {
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+ul {
+  list-style: none;
+  a {
+    text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+
+    .logoBox {
+      display: none;
+    }
+
+    .logoBox__desktop {
+      display: block;
+      width: 50%;
+      img {
+        width: 100px;
+      }
+    }
+
+    .nav,
+    .hamburgerContainer {
+      display: none;
+    }
+
+    .nav__desktop {
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      padding-right: 2rem;
+
+      .desktop__ul {
+        display: flex;
+        padding-top: 0.2rem;
+
+        li {
+          margin-left: 1rem;
+          color: #757575;
+          font-size: 0.9rem;
+          font-weight: 500;
+          cursor: pointer;
+
+          &:hover {
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 992px) {
+}
+
+@media screen and (min-width: 1320px) {
+}
